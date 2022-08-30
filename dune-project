@@ -10,8 +10,8 @@
 
 (package
  (name yuv)
- (synopsis "Bindings to yuv library for manipulating image in YUV format")
- (description "Bindings to yuv library for manipulating image in YUV format. libyuv is an open source project that includes YUV scaling and conversion functionality.")
+ (synopsis "Bindings to the yuv library for manipulating image in YUV format")
+ (description "Bindings to the yuv library for manipulating image in YUV format. libyuv is an open source project that includes YUV scaling and conversion functionality.")
  (depends
   conf-pkg-config
   conf-yuv
