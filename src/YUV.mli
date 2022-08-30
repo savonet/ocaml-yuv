@@ -6,7 +6,7 @@ type filter_mode = [
   ]
 
 module I420 : sig
-  type data = (Unsigned.UInt8.t, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
+  type data = (int, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
 
   (** An I420 image. *)
   type t =

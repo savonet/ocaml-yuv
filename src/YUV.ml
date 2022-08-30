@@ -4,7 +4,7 @@ open Foreign
 type filter_mode = [`None | `Linear | `Bilinear | `Box]
 
 module I420 = struct
-  type data = (Unsigned.UInt8.t, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
+  type data = (int, Bigarray.int8_unsigned_elt, Bigarray.c_layout) Bigarray.Array1.t
 
   type t =
     {
@@ -18,7 +18,7 @@ module I420 = struct
       height : int
     }
   
-  let data = ptr uint8_t
+  let data = ptr int8_t
 
   let scale = foreign "I420Scale" (data @-> int @-> data @-> int @-> data @-> int @-> int @-> int @-> data @-> int @-> data @-> int @-> data @-> int @-> int @-> int @-> int @-> returning int)
 
