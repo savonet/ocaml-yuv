@@ -16,9 +16,10 @@ let of_image (img : I.YUV420.t) =
   }
 
 let () =
-  let img = I.YUV420.create 200 100 in
-  let img' = I.YUV420.create 640 480 in
-  YUV.I420.scale (of_image img) (of_image img');
+  let src = I.YUV420.create 200 100 in
+  let dst = I.YUV420.create 640 480 in
+  I.YUV420.gradient_uv src (0, 0) (0xff, 0) (0, 0xff);
+  YUV.I420.scale ~filter:`Bilinear (of_image src) (of_image dst);
   let oc = open_out "out.bmp" in
-  output_string oc (I.YUV420.to_BMP img');
+  output_string oc (I.YUV420.to_BMP dst);
   close_out oc

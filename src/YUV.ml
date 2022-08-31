@@ -33,7 +33,7 @@ module I420 = struct
     let ans =
       scale
         (p src.y) src.y_stride (p src.u) src.u_stride (p src.v) src.v_stride src.width src.height
-        (p dst.y) dst.y_stride (p dst.v) dst.u_stride (p dst.v) dst.v_stride dst.width dst.height
+        (p dst.y) dst.y_stride (p dst.u) dst.u_stride (p dst.v) dst.v_stride dst.width dst.height
         (int_of_filter_mode filter)
     in
     (* TODO *)

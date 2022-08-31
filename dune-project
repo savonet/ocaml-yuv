@@ -1,4 +1,4 @@
-(lang dune 2.0)
+(lang dune 3.0)
 (version 0.1.0)
 (name yuv)
 (source (github savonet/ocaml-yuv))
@@ -7,6 +7,7 @@
 (maintainers "The Savonet Team <savonet-users@lists.sourceforge.net>")
 
 (generate_opam_files true)
+(using ctypes 0.1)
 
 (package
  (name yuv)

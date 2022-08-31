@@ -3,11 +3,10 @@
  (modules test)
  (optional)
  (libraries yuv mm)
+ (flags (-cclib -lyuv))
 )
 
 (rule
  (alias runtest)
- (action
-  (run ./test.exe)
- )
+ (action (run ./test.exe))
 )

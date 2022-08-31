@@ -2,10 +2,10 @@
  (name YUV)
  (public_name yuv)
  (libraries ctypes ctypes.foreign)
- (c_library_flags
-  (:include c_library_flags.sexp)))
+ (c_library_flags (:include c_library_flags.sexp))
+)
 
 (rule
  (targets c_flags.sexp c_library_flags.sexp)
- (action
-  (run ./config/discover.exe)))
+ (action (run ./config/discover.exe))
+)
